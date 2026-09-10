@@ -2,6 +2,8 @@
 """
 Matrix shape utility
 """
+
+
 def matrix_shape(matrix):
     shape = []
     while isinstance(matrix, list):
