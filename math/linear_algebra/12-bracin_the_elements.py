@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-import numpy as np
-"""Module perfoms element-wise math operations"""
+"""Module that performs element-wise operations on two matrices."""
 
 
 def np_elementwise(mat1, mat2):
-    """Performs element-wise addition, subtraction, multiplication, and division."""
-    mat1 = np.array(mat1)
-    mat2 = np.array(mat2)
+    """Performs element-wise addition, subtraction, multiplication,
+    and division.
+    """
     return (mat1 + mat2, mat1 - mat2, mat1 * mat2, mat1 / mat2)
