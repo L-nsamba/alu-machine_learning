@@ -3,28 +3,24 @@
 
 
 def minor(matrix):
-    """Calculates the minor matrix of a matrix"""
-
-    if not isinstance(matrix, list) or not all(
-            isinstance(row, list) for row in matrix):
+    """Calculation of the minor matrix of a matrix"""
+    # Validate input type and structure
+    if (not isinstance(matrix, list)
+            or not all(isinstance(row, list) for row in matrix)):
         raise TypeError("matrix must be a list of lists")
 
     n = len(matrix)
-
-    if n == 0 or any(len(row) != n for row in matrix):
+    if n == 0 or any(len(r) != n for r in matrix):
         raise ValueError("matrix must be a non-empty square matrix")
 
-    minor_matrix = []
-
+    # Compute minor matrix by excluding row and column for each element
+    minors = []
     for i in range(n):
-        minor_row = []
+        row_minors = []
         for j in range(n):
-            submatrix = [
-                row[:j] + row[j + 1:]
-                for k, row in enumerate(matrix)
-                if k != i
-            ]
-            minor_row.append(determinant(submatrix))
-        minor_matrix.append(minor_row)
+            sub = [r[:j] + r[j+1:] for k, r in enumerate(matrix) if k != i]
+            row_minors.append(determinant(sub))
+        minors.append(row_minors)
 
-    return minor_matrix
+    return minors
+
