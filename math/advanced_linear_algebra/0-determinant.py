@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
-# This module defines a function to calculate the determinant of a matrix.
+""" Module defines a function to calculate the determinant of a matrix """
 
 def determinant(matrix):
-    # Validate input and compute determinant recursively
-    if not isinstance(matrix, list) or not all(isinstance(r, list) for r in matrix):
-        raise TypeError("matrix must be a list of lists")
-
+    """Calculation of the determinat of a matrix"""
     n = len(matrix)
     if n == 0 or (n == 1 and len(matrix[0]) == 0):
         return 1  # determinant of a 0x0 matrix is conventionally 1
