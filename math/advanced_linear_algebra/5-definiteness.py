@@ -16,6 +16,10 @@ def definiteness(matrix):
     if matrix.shape[0] == 0:
         return None
 
+    # Check symmetry
+    if not np.allclose(matrix, matrix.T):
+        return None
+
     # Compute eigenvalues
     try:
         eigvals = np.linalg.eigvals(matrix)
