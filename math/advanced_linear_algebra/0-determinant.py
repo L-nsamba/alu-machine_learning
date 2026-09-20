@@ -28,4 +28,3 @@ def determinant(matrix):
         det += ((-1) ** col) * matrix[0][col] * determinant(minor)
 
     return det
-
