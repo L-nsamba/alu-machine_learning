@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """Define a class representing a multivariate normal distribution."""
 

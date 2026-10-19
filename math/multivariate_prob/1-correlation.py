@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """Calculate the correlation matrix from a covariance matrix."""
 
