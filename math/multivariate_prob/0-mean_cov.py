@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """Calculate the mean and covariance of a data set."""
 
